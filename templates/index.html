@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'aztech/style.css' %}">
+    <title>aztech</title>
+</head>
+<body>
+    <h1 class="layout">aztech</h1>
+
+    {% for post in posts reversed%}
+    <div class="layout">
+        <a class="nostyle" href="/post/{{post.id}}">
+            <h2>{{post.title}}</h2>
+            <p>{{post.created_at}}</p>
+            <p>{{post.description|truncatewords:10}}</p>
+        </a>
+    </div>
+    {% endfor %}
+</body>
+</html>

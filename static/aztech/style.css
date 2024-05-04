@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+}
+.layout{
+    background-color:beige;
+    font-family: 'Courier New', Courier, monospace;
+}
+.nostyle{
+    text-decoration: none;
+    color: black;
+}
